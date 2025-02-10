@@ -204,7 +204,7 @@ const Tree = (arr) => {
   function rebalance() {
     const newArray = [];
     const callback = (node) => newArray.push(node.value);
-    postOrder(callback);
+    inOrder(callback);
     array = newArray; // reassign original array closure
 
     root = buildTree(array);
